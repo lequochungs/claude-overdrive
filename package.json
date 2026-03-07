@@ -1,0 +1,22 @@
+{
+    "name": "claude-overdrive-kit",
+    "version": "1.0.0",
+    "description": "700+ Skills & Automated Workflows for Claude Code",
+    "main": "index.js",
+    "bin": {
+        "claude-overdrive": "./bin/cli.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lequochungs/claude-overdrive.git"
+    },
+    "keywords": [
+        "claude",
+        "ai",
+        "agent",
+        "skills",
+        "workflow"
+    ],
+    "author": "lequochungs",
+    "license": "MIT"
+}

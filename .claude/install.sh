@@ -49,6 +49,7 @@ mkdir -p .claude
 cp -R "$TEMP_DIR/.claude/commands" .claude/
 cp -R "$TEMP_DIR/.claude/skills" .claude/
 cp "$TEMP_DIR/.claude/setup.sh" .claude/
+cp "$TEMP_DIR/.claude/CLAUDE.md.template" .claude/ 2>/dev/null
 
 # Finalize
 echo -e "${GREEN}[3/3]${NC} Finalizing installation..."

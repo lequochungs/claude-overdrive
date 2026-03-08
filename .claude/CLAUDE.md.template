@@ -1,0 +1,24 @@
+# CLAUDE.md (Overdrive v3.0)
+
+See @.claude/commands/company-sop.md for the full AI engineering protocol.
+
+## 🛠️ Essential Commands
+- **Init**: `sh .claude/setup.sh` (or `/init`)
+- **Automate**: `/cook` (Autonomous feature generation)
+- **Persist**: `/save-brain` (Context preservation - **CRITICAL**)
+- **Test**: [Insert project test command here, e.g. `npm test`]
+
+## 🎨 Style & Standards
+- **Naming**: `camelCase` (vars), `PascalCase` (components/classes).
+- **Types**: 100% strict TypeScript. No `any`.
+- **Logic**: Max 20 lines per function. Prefer functional, pure patterns.
+- **Rules**: Always consult `.claude/skills/` for domain-specific tasks.
+
+## 🔄 Core Workflow
+1. `/plan` -> Create PRD.
+2. `/design` -> Build `docs/roadmap.md`.
+3. `/code` -> Implement roadmap sequentially.
+4. Update `docs/roadmap.md` after every completed task.
+
+---
+*Keep this file concise. Use skills for domain knowledge.*

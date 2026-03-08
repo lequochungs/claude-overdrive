@@ -78,6 +78,12 @@ echo -e "${GREEN}[3/3]${NC} Finalizing..."
 # Ensure permissions
 chmod -R +r "$TARGET_DIR"
 
+# Initialize CLAUDE.md if not exists
+if [ ! -f "CLAUDE.md" ]; then
+    echo -e "${BLUE}Initializing CLAUDE.md from template...${NC}"
+    cp "$SOURCE_DIR/CLAUDE.md.template" "CLAUDE.md" 2>/dev/null
+fi
+
 echo ""
 echo -e "${GREEN}✅ SUCCESS: Claude Overdrive is now active in this project!${NC}"
 echo "Try running '/plan' or '/init' in the Claude prompts."

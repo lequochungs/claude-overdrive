@@ -75,12 +75,8 @@ Sử dụng **AskUserQuestion** tool để hỏi tối đa 3 câu:
 
 ## Phase 1: 📋 Product Planning
 
-### Load Agent
-```bash
-# Đọc Planner Agent
-cat .agent/agents/planner.md
-cat .agent/roles/product-manager.md
-```
+### Persona Focus
+You will act as a **Senior Product Manager**. You MUST think like a PM, focusing on user needs, business goals, and clear acceptance criteria.
 
 ### Actions
 1. **Analyze requirements** từ Phase 0
@@ -148,11 +144,8 @@ cat .agent/roles/product-manager.md
 
 ## Phase 2: 🏗️ System Design
 
-### Load Agent
-```bash
-cat .agent/roles/architect.md
-cat .agent/agents/database-admin.md
-```
+### Persona Focus
+You will act as a **Software Architect and Database Admin**. Focus on scalability, clean database design, robust API contracts, and security.
 
 ### Actions
 1. **Read PRD** từ Phase 1
@@ -243,11 +236,8 @@ cat .agent/agents/database-admin.md
 - User requests UI/frontend work
 - PRD includes user-facing features
 
-### Load Agent
-```bash
-cat .agent/agents/ui-ux-designer.md
-cat .agent/workflows/visualize.md
-```
+### Persona Focus
+You will act as a **UI/UX Designer**. Focus on user experience, modern aesthetics, and generating high-quality mockups if needed.
 
 ### Actions
 1. **Vibe discovery** - Understand user preferences
@@ -264,11 +254,8 @@ cat .agent/workflows/visualize.md
 
 ## Phase 4: 💻 Implementation
 
-### Load Agent
-```bash
-cat .agent/roles/engineer.md
-cat .agent/agents/fullstack-developer.md
-```
+### Persona Focus
+You will act as a **Senior Fullstack Engineer**. Focus on clean code, secure implementations, and full testability.
 
 ### Actions
 1. **Setup project** (if new):
@@ -314,11 +301,8 @@ function example(param: Type): ReturnType {
 
 ## Phase 5: 🧪 Testing & QA
 
-### Load Agent
-```bash
-cat .agent/agents/tester.md
-cat .agent/roles/qa-engineer.md
-```
+### Persona Focus
+You will act as a **QA Engineer**. Focus on finding edge cases, writing robust tests, and ensuring high feature coverage.
 
 ### Actions
 1. **Create tests**:
@@ -374,11 +358,8 @@ cat .agent/roles/qa-engineer.md
 
 ## Phase 6: 🔍 Code Review
 
-### Load Agent
-```bash
-cat .agent/agents/code-reviewer.md
-cat .agent/roles/code-reviewer.md
-```
+### Persona Focus
+You will act as a **Strict Code Reviewer and Security Auditor**. Look for performance bottlenecks, security flaws, or deviations from coding standards.
 
 ### Actions
 1. **Review all changes**:
@@ -429,11 +410,8 @@ cat .agent/roles/code-reviewer.md
 
 ## Phase 7: 🚀 Deployment Prep
 
-### Load Agent
-```bash
-cat .agent/roles/devops.md
-cat .agent/workflows/deploy.md
-```
+### Persona Focus
+You will act as a **DevOps Engineer**. Focus on reliable deployment pipelines, containerization, and environment configurations.
 
 ### Actions
 1. **Prepare deployment artifacts**:
@@ -568,7 +546,7 @@ If any phase fails:
 
 ## ⚙️ Configuration
 
-Tùy chỉnh trong `.agent/config.json` (optional):
+Tùy chỉnh cấu hình chung (nếu có) thông qua `.claude/project.json`:
 
 ```json
 {

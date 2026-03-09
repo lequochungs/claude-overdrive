@@ -258,20 +258,11 @@ You will act as a **UI/UX Designer**. Focus on user experience, modern aesthetic
 You will act as a **Senior Fullstack Engineer**. Focus on clean code, secure implementations, and full testability.
 
 ### Actions
-1. **Setup project** (if new):
-   ```bash
-   # Detect or create project structure
-   # Install dependencies
-   # Configure environment
-   ```
-
-2. **Implement in order**:
-   - Database models/migrations
-   - Core business logic
-   - API endpoints
-   - Frontend components
-   - Integration layer
-
+1. **Locate Roadmap**: Read `docs/roadmap.md` (which should have been generated in Phase 2 or manually created).
+2. **Execute Roadmap Sequentially**:
+   - MUST implement tasks exactly in the order specified in the roadmap.
+   - For each task, write/modify the necessary code.
+   - Mark the task as `[x]` in `docs/roadmap.md` immediately after completing it.
 3. **Follow best practices**:
    - YAGNI, KISS, DRY
    - Clean code principles

@@ -142,90 +142,30 @@ You will act as a **Senior Product Manager**. You MUST think like a PM, focusing
 
 ---
 
-## Phase 2: 🏗️ System Design
+## Phase 2: 🏗️ System Architecture & Design
+
+### Conditional Trigger
+- **Check files**: Verify if `docs/roadmap.md` and `docs/architecture.md` exist.
+- **IF EXIST**: You MUST SKIP Phase 2 and Phase 3, and jump directly to **Phase 4** to execute the roadmap.
+- **IF MISSING**: You MUST execute the actions below to generate the design suite.
 
 ### Persona Focus
 You will act as a **Software Architect and Database Admin**. Focus on scalability, clean database design, robust API contracts, and security.
 
-### Actions
-1. **Read PRD** từ Phase 1
-2. **Create Design Doc** tại `plans/specs/design-{feature}.md`:
+### Actions (Only if missing design files)
+1. **Analyze PRD**: Read `docs/prd.md` or the PRD created in Phase 1.
+2. **Generate Technical Suite**: Create the following 6 documents in the `docs/` folder:
+   - `docs/architecture.md`: Overall System Architecture.
+   - `docs/diagram_flow.md`: Mermaid Sequence/User Flow diagrams.
+   - `docs/api_spec.md`: Details of Endpoints, Request/Response bodies, and Status Codes.
+   - `docs/ui_ux.md`: Outline layout (Wireframes using Mermaid) and Design Tokens.
+   - `docs/security_tech.md`: Detailed Tech Stack and security measures.
+   - `docs/roadmap.md`: CRITICAL. Step-by-step implementation Task list.
 
-```markdown
-# System Design: {Feature Name}
-
-## 1. High-Level Architecture
-
-\`\`\`
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│   Client    │────▶│    API      │────▶│  Database   │
-│  (Frontend) │     │  (Backend)  │     │ (PostgreSQL)│
-└─────────────┘     └─────────────┘     └─────────────┘
-\`\`\`
-
-## 2. Component Breakdown
-| Component | Technology | Description |
-|-----------|------------|-------------|
-| Frontend | React/Next.js | User interface |
-| API | Node.js/Express | Business logic |
-| Database | PostgreSQL | Data persistence |
-
-## 3. Database Schema
-
-### Table: users
-| Column | Type | Constraints |
-|--------|------|-------------|
-| id | UUID | PRIMARY KEY |
-| email | VARCHAR(255) | UNIQUE, NOT NULL |
-| password_hash | VARCHAR(255) | NOT NULL |
-| created_at | TIMESTAMP | DEFAULT NOW() |
-
-### Table: {entity}
-...
-
-### Relationships
-- users 1:N orders
-- orders N:N products
-
-## 4. API Endpoints
-
-### Authentication
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | /api/auth/login | User login |
-| POST | /api/auth/register | User registration |
-| POST | /api/auth/logout | User logout |
-
-### Resources
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /api/{resource} | List all |
-| GET | /api/{resource}/:id | Get one |
-| POST | /api/{resource} | Create |
-| PUT | /api/{resource}/:id | Update |
-| DELETE | /api/{resource}/:id | Delete |
-
-## 5. Security Architecture
-- Authentication: JWT tokens
-- Authorization: Role-based (RBAC)
-- Data: Encryption at rest + transit
-- Input: Validation & sanitization
-
-## 6. Implementation Order
-1. Database setup & migrations
-2. Auth module
-3. Core business logic
-4. API endpoints
-5. Frontend components
-6. Integration & testing
+### Gate 2: Design Complete ✅
 ```
-
-### Gate 2: Design Review ✅
-```
-□ Architecture documented
-□ Database schema defined
-□ API contracts specified
-□ Security considered
+□ Full docs/ suite generated successfully
+□ Roadmap broken down into testable steps
 ```
 
 ---
